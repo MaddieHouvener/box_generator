@@ -1,0 +1,21 @@
+.boxColor{
+    background-color: rgb(152, 217, 219);
+    width: 90px;
+    height: 90px;
+    margin: auto;
+}
+.anotherBoxColor{
+    background-color: pink;
+    width: 90px;
+    height: 90px;
+    margin: auto;
+}
+.thirdbox{
+    background-color: rgb(243, 243, 132);
+    width: 90px;
+    height: 90px;
+    margin: auto;
+}
+.boxes{
+    display: flex;
+}

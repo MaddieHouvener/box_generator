@@ -1,23 +1,22 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+// import './boxColor.css'
+
+import Display from './components/Display';
+import New from './components/New';
 
 function App() {
+  const [state, setState] = useState([]);
+
+  const makeNewBox = (color, height, width) => {
+    setState([...state, {color, height, width}]);
+    console.log('this is from app.js and this is set state: ', setState)
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Display newBoxForm = {makeNewBox} />
+      <New boxes={state} />
     </div>
   );
 }
